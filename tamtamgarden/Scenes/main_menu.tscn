@@ -1,0 +1,201 @@
+[gd_scene load_steps=15 format=3 uid="uid://c12nutfvqxr07"]
+
+[ext_resource type="Texture2D" uid="uid://bby3osjfr13n3" path="res://BackGroundArt/TitleArt.png" id="2_7vrkn"]
+
+[sub_resource type="GDScript" id="GDScript_28flt"]
+script/source = "extends Node2D
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_new_game_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Scenes/tam_tams.tscn\")
+
+
+func _on_options_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Scenes/options.tscn\")
+
+#access save file state if save state exists then load in file
+func _on_load_game_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_info_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Scenes/info.tscn\")
+
+	
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(0.868559, 0.407627, 0.722475, 0.270588)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0o4t1"]
+bg_color = Color(0, 0.6, 1, 0.270588)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glbon"]
+bg_color = Color(0, 0.6, 1, 0.270588)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlkkf"]
+bg_color = Color(0.868559, 0.407627, 0.722475, 0.270588)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0k4wn"]
+bg_color = Color(0, 0.6, 1, 0.270588)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe12f"]
+bg_color = Color(0, 0.6, 1, 0.270588)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qtwp"]
+bg_color = Color(0.868559, 0.407627, 0.722475, 0.270588)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5v2v"]
+bg_color = Color(0, 0.6, 1, 0.270588)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dy7ct"]
+bg_color = Color(0, 0.6, 1, 0.270588)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
+bg_color = Color(0.868559, 0.407627, 0.722475, 0.270588)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iotk1"]
+bg_color = Color(0, 0.6, 1, 0.270588)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
+bg_color = Color(0, 0.6, 1, 0.270588)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+corner_detail = 9
+
+[node name="Main_Menu" type="Node2D"]
+script = SubResource("GDScript_28flt")
+
+[node name="GameTitle" type="Sprite2D" parent="."]
+position = Vector2(577.5, 307.75)
+scale = Vector2(0.605729, 0.480903)
+texture = ExtResource("2_7vrkn")
+
+[node name="ButtonManager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Info" type="Button" parent="ButtonManager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 11.05
+anchor_top = 12.775
+anchor_right = 18.9
+anchor_bottom = 15.225
+theme_override_colors/font_color = Color(0, 0.972549, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0o4t1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_glbon")
+text = "More Info"
+metadata/_edit_use_anchors_ = true
+
+[node name="Options" type="Button" parent="ButtonManager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 19.6
+anchor_top = 12.775
+anchor_right = 27.45
+anchor_bottom = 15.225
+theme_override_colors/font_color = Color(0, 0.972549, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxFlat_nlkkf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0k4wn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qe12f")
+text = "Options"
+metadata/_edit_use_anchors_ = true
+
+[node name="LoadGame" type="Button" parent="ButtonManager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.475
+anchor_top = 12.775
+anchor_right = 10.325
+anchor_bottom = 15.225
+offset_top = -3.05176e-05
+offset_bottom = 6.10352e-05
+theme_override_colors/font_color = Color(0, 0.972549, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxFlat_8qtwp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5v2v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dy7ct")
+text = "Load Game"
+metadata/_edit_use_anchors_ = true
+
+[node name="NewGame" type="Button" parent="ButtonManager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 10.05
+anchor_top = 6.375
+anchor_right = 19.6
+anchor_bottom = 8.95
+theme_override_colors/font_color = Color(0, 0.972549, 1, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iotk1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vrkn")
+text = "New Game"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ButtonManager/Info" to="." method="_on_info_pressed"]
+[connection signal="pressed" from="ButtonManager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ButtonManager/LoadGame" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="ButtonManager/NewGame" to="." method="_on_new_game_pressed"]

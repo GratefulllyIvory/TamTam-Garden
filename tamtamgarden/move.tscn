@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cou0hneog644c"]
+
+[ext_resource type="AudioStream" uid="uid://bwg8ymtnctwho" path="res://Sounds/sfx_sound_neutral6.wav" id="1_6kapx"]
+
+[node name="Move" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_6kapx")

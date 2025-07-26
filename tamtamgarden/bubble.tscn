@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1gupy5jen0jo"]
+
+[ext_resource type="Texture2D" uid="uid://c0ebtvffhgfmf" path="res://WorldSprites/Power_template.png" id="1_n2mqj"]
+[ext_resource type="Script" uid="uid://dws6gpdnybb7x" path="res://bubbly.gd" id="1_y2db8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y2db8"]
+radius = 15.0
+
+[node name="Bubble" type="CharacterBody2D"]
+z_index = 1
+script = ExtResource("1_y2db8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+top_level = true
+z_index = 1
+texture = ExtResource("1_n2mqj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_y2db8")
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]

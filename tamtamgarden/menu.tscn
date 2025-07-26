@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3ar4710y8g6x"]
+
+[ext_resource type="AudioStream" uid="uid://cqajkwfaqsrhf" path="res://Sounds/sfx_menu_select1.wav" id="1_lti8b"]
+
+[node name="Menu" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_lti8b")
+bus = &"Blank"
